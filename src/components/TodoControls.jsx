@@ -1,3 +1,5 @@
+import { Search } from 'lucide-react'
+
 const FILTERS = [
   { value: 'all', label: 'Все' },
   { value: 'active', label: 'Активные' },
@@ -11,7 +13,9 @@ function TodoControls({ search, onSearch, filter, onFilter }) {
   return (
     <div className="controls">
       <div className="search-box">
-        <span className="search-icon">🔍</span>
+        <span className="search-icon">
+          <Search size={16} />
+        </span>
         <input
           type="text"
           placeholder="Поиск задач..."

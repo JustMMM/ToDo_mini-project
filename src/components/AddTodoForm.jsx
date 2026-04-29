@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Plus } from 'lucide-react'
 
 function AddTodoForm({ onAdd }) {
   const [text, setText] = useState('')
@@ -23,7 +24,8 @@ function AddTodoForm({ onAdd }) {
           onChange={(e) => setText(e.target.value)}
         />
         <button type="submit" className="btn-add">
-          + Добавить
+          <Plus size={18} />
+          Добавить
         </button>
       </div>
       <div className="priority-row">

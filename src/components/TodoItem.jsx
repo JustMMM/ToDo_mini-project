@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Check, Pencil, Trash2 } from 'lucide-react'
 
 const PRIORITY_LABELS = {
   high: 'Высокий',
@@ -58,7 +59,7 @@ function TodoItem({ todo, onToggle, onDelete, onEdit }) {
       <div className="todo-actions">
         {isEditing ? (
           <button className="btn-icon btn-save" onClick={handleSave} title="Сохранить">
-            ✓
+            <Check size={16} />
           </button>
         ) : (
           <button
@@ -66,7 +67,7 @@ function TodoItem({ todo, onToggle, onDelete, onEdit }) {
             onClick={() => setIsEditing(true)}
             title="Редактировать"
           >
-            ✏️
+            <Pencil size={16} />
           </button>
         )}
         <button
@@ -74,7 +75,7 @@ function TodoItem({ todo, onToggle, onDelete, onEdit }) {
           onClick={() => onDelete(todo.id)}
           title="Удалить"
         >
-          ✕
+          <Trash2 size={16} />
         </button>
       </div>
     </div>
